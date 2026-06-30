@@ -1,345 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Fat To Fit Community</title>
+<title>Fat To Fit Community | Transform Your Life</title>
+
+<meta name="description" content="Join Fat To Fit Community and start your healthy lifestyle today.">
+
+<link rel="stylesheet" href="style.css">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
-<style>
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
 
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:'Poppins',sans-serif;
-}
+<link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
 
-html{
-scroll-behavior:smooth;
-}
-
-body{
-background:#f7fdf8;
-color:#222;
-}
-
-header{
-
-background:white;
-box-shadow:0 3px 15px rgba(0,0,0,.08);
-position:sticky;
-top:0;
-z-index:999;
-}
-
-.container{
-
-width:90%;
-max-width:1200px;
-margin:auto;
-
-}
-
-.nav{
-
-display:flex;
-justify-content:space-between;
-align-items:center;
-padding:15px 0;
-
-}
-
-.logo{
-
-display:flex;
-align-items:center;
-gap:15px;
-
-}
-
-.logo img{
-
-width:80px;
-
-}
-
-.logo h2{
-
-color:#1f2937;
-font-size:28px;
-
-}
-
-.logo span{
-
-color:#67b91d;
-
-}
-
-nav a{
-
-text-decoration:none;
-margin-left:30px;
-font-weight:600;
-color:#333;
-transition:.3s;
-
-}
-
-nav a:hover{
-
-color:#67b91d;
-
-}
-
-/* HERO */
-
-.hero{
-
-background:white;
-padding:40px 0;
-
-}
-
-.hero img{
-
-width:100%;
-border-radius:20px;
-box-shadow:0 15px 40px rgba(0,0,0,.15);
-
-}
-
-.content{
-
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(350px,1fr));
-gap:50px;
-align-items:center;
-margin-top:60px;
-
-}
-
-.content h1{
-
-font-size:52px;
-line-height:1.2;
-margin-bottom:20px;
-
-}
-
-.green{
-
-color:#69bd1c;
-
-}
-
-.content p{
-
-font-size:18px;
-line-height:1.8;
-color:#555;
-
-}
-
-.btn{
-
-display:inline-block;
-padding:15px 35px;
-background:#69bd1c;
-color:white;
-text-decoration:none;
-border-radius:50px;
-margin-top:25px;
-font-weight:bold;
-transition:.3s;
-
-}
-
-.btn:hover{
-
-background:#1d3557;
-
-}
-
-.boxes{
-
-margin-top:70px;
-
-display:grid;
-
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-
-gap:25px;
-
-}
-
-.box{
-
-background:white;
-
-padding:35px;
-
-border-radius:15px;
-
-box-shadow:0 10px 30px rgba(0,0,0,.08);
-
-transition:.3s;
-
-text-align:center;
-
-}
-
-.box:hover{
-
-transform:translateY(-8px);
-
-}
-
-.box h3{
-
-color:#67b91d;
-
-margin:15px 0;
-
-}
-
-.section{
-
-padding:90px 0;
-
-}
-
-.section h2{
-
-text-align:center;
-
-font-size:40px;
-
-margin-bottom:20px;
-
-}
-
-.section p{
-
-text-align:center;
-
-color:#555;
-
-margin-bottom:50px;
-
-}
-
-.benefits{
-
-display:grid;
-
-grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-
-gap:25px;
-
-}
-
-.card{
-
-background:white;
-
-padding:30px;
-
-border-left:6px solid #69bd1c;
-
-border-radius:15px;
-
-box-shadow:0 10px 20px rgba(0,0,0,.08);
-
-}
-
-.card h4{
-
-margin-bottom:10px;
-
-}
-
-.join{
-
-background:linear-gradient(135deg,#69bd1c,#1d3557);
-
-padding:90px 20px;
-
-text-align:center;
-
-color:white;
-
-}
-
-.join h2{
-
-font-size:45px;
-
-margin-bottom:20px;
-
-}
-
-.join p{
-
-font-size:18px;
-
-margin-bottom:30px;
-
-}
-
-footer{
-
-background:#0f172a;
-
-color:white;
-
-padding:40px;
-
-text-align:center;
-
-}
-
-.whatsapp{
-
-position:fixed;
-
-bottom:20px;
-
-right:20px;
-
-background:#25D366;
-
-width:65px;
-
-height:65px;
-
-border-radius:50%;
-
-display:flex;
-
-align-items:center;
-
-justify-content:center;
-
-font-size:32px;
-
-text-decoration:none;
-
-color:white;
-
-box-shadow:0 10px 25px rgba(0,0,0,.3);
-
-}
-
-</style>
+<link rel="stylesheet" href="Chatbot/chatbot.css">
 
 </head>
 
 <body>
+
+<!-- Loader -->
+
+<div id="loader">
+<div class="spinner"></div>
+</div>
+
+<!-- Navigation -->
 
 <header>
 
@@ -349,91 +43,168 @@ box-shadow:0 10px 25px rgba(0,0,0,.3);
 
 <img src="logo.jpeg">
 
-<h2>FAT TO <span>FIT</span></h2>
+<h2>Fat <span>To Fit</span></h2>
 
 </div>
 
 <nav>
 
-<a href="#">Home</a>
-
-<a href="#">About</a>
-
-<a href="#">Programs</a>
-
-<a href="#">Success</a>
-
-<a href="#">Contact</a>
+<a href="#home">Home</a>
+<a href="#about">About</a>
+<a href="#services">Services</a>
+<a href="#gallery">Gallery</a>
+<a href="#tools">Health Tools</a>
+<a href="#contact">Contact</a>
+<a href="#register" class="nav-join">Join Free</a>
 
 </nav>
+
+<div class="menu-btn">
+<i class="fa-solid fa-bars"></i>
+</div>
 
 </div>
 
 </header>
 
-<section class="hero">
+<!-- Mobile Menu -->
+<div class="mobile-overlay" id="mobileOverlay"></div>
+<div class="mobile-menu" id="mobileMenu">
+<button class="close-menu" id="closeMenu"><i class="fa-solid fa-xmark"></i></button>
+<a href="#home"><i class="fa-solid fa-house"></i> Home</a>
+<a href="#about"><i class="fa-solid fa-heart"></i> About</a>
+<a href="#services"><i class="fa-solid fa-hand-holding-heart"></i> Services</a>
+<a href="#gallery"><i class="fa-solid fa-images"></i> Gallery</a>
+<a href="#tools"><i class="fa-solid fa-chart-line"></i> Health Tools</a>
+<a href="#contact"><i class="fa-solid fa-phone"></i> Contact</a>
+<a href="#register" style="background:#34a853;color:white;margin-top:10px;border-radius:25px;text-align:center;display:flex;justify-content:center;"><i class="fa-solid fa-user-plus" style="color:white;"></i> Join Free Session</a>
+</div>
 
-<div class="container">
+<!-- Hero -->
 
-<img src="banner.jpeg">
+<section class="hero" id="home">
 
-<div class="content">
+<div class="container hero-grid">
 
-<div>
+<div class="hero-left" data-aos="fade-right">
 
-<h1>Transform Your Life With <span class="green">Fat To Fit Community</span></h1>
+<h1>
+
+Transform Your
+
+<span>Health</span>
+
+Start Your
+
+<span>Fitness Journey</span>
+
+Today
+
+</h1>
 
 <p>
 
-Join India's growing wellness community and begin your healthy lifestyle journey.
-
-Daily motivation, live sessions, nutrition guidance, weight management, community support and much more.
+Join India's Fast Growing Fat To Fit Community and become healthier naturally.
 
 </p>
 
-<a href="https://wa.me/918543804210" class="btn">Join on WhatsApp</a>
+<div class="hero-buttons">
+
+<a href="https://chat.whatsapp.com/HRDZN5Bllx74QV34udndcz" target="_blank" class="btn">
+
+Join WhatsApp
+
+</a>
+
+<a href="#about" class="btn2">
+
+Learn More
+
+</a>
 
 </div>
 
-<div>
+</div>
 
-<img src="logo.jpeg" style="width:100%;max-width:420px;display:block;margin:auto;">
+<div class="hero-right" data-aos="zoom-in">
+
+<img src="banner.jpeg">
 
 </div>
 
 </div>
 
-<div class="boxes">
+</section>
 
-<div class="box">
+<!-- About -->
 
-<h3>Weight Loss</h3>
+<section id="about" class="section">
 
-<p>Personal guidance to lose weight naturally.</p>
+<div class="container">
 
-</div>
+<h2 class="title">About Community</h2>
 
-<div class="box">
+<p class="subtitle">
+
+Small Habits. Big Transformation.
+
+</p>
+
+<div class="about-grid">
+
+<div class="about-card">
+
+<i class="fa-solid fa-heart-pulse"></i>
 
 <h3>Healthy Lifestyle</h3>
 
-<p>Build long-term healthy habits for life.</p>
+<p>
+
+Build healthy habits for lifetime.
+
+</p>
 
 </div>
 
-<div class="box">
+<div class="about-card">
 
-<h3>Daily Motivation</h3>
+<i class="fa-solid fa-dumbbell"></i>
 
-<p>Stay inspired with our active community.</p>
+<h3>Fitness</h3>
+
+<p>
+
+Daily workouts and motivation.
+
+</p>
 
 </div>
 
-<div class="box">
+<div class="about-card">
 
-<h3>Live Sessions</h3>
+<i class="fa-solid fa-apple-whole"></i>
 
-<p>Join regular online health awareness sessions.</p>
+<h3>Nutrition</h3>
+
+<p>
+
+Simple Indian Diet Plans.
+
+</p>
+
+</div>
+
+<div class="about-card">
+
+<i class="fa-solid fa-users"></i>
+
+<h3>Community</h3>
+
+<p>
+
+Supportive members always motivate you.
+
+</p>
 
 </div>
 
@@ -442,64 +213,485 @@ Daily motivation, live sessions, nutrition guidance, weight management, communit
 </div>
 
 </section>
+
+<!-- Counter -->
+
+<section class="counter">
+
+<div class="container counter-grid">
+
+<div>
+
+<h2 class="count" data-target="5000">0</h2>
+
+<p>Members</p>
+
+</div>
+
+<div>
+
+<h2 class="count" data-target="2500">0</h2>
+
+<p>Transformation</p>
+
+</div>
+
+<div>
+
+<h2 class="count" data-target="120">0</h2>
+
+<p>Live Sessions</p>
+
+</div>
+
+<div>
+
+<h2 class="count" data-target="98">0</h2>
+
+<p>Success %</p>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- Services -->
+
+<section id="services" class="section">
+
+<div class="container">
+
+<h2 class="title">Our Services</h2>
+
+<div class="service-grid">
+
+<div class="service-card">
+
+<i class="fa-solid fa-weight-scale"></i>
+
+<h3>Weight Loss</h3>
+
+</div>
+
+<div class="service-card">
+
+<i class="fa-solid fa-heart"></i>
+
+<h3>Healthy Lifestyle</h3>
+
+</div>
+
+<div class="service-card">
+
+<i class="fa-solid fa-person-running"></i>
+
+<h3>Workout Plans</h3>
+
+</div>
+
+<div class="service-card">
+
+<i class="fa-solid fa-utensils"></i>
+
+<h3>Diet Guidance</h3>
+
+</div>
+
+<div class="service-card">
+
+<i class="fa-solid fa-video"></i>
+
+<h3>Live Sessions</h3>
+
+</div>
+
+<div class="service-card">
+
+<i class="fa-solid fa-user-group"></i>
+
+<h3>Community Support</h3>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- Gallery -->
+
+<!-- Transformation Gallery -->
+
+<!-- Transformation Slider -->
+
+<section class="section" id="gallery">
+
+<div class="container">
+
+<h2 class="title">Transformation Gallery</h2>
+
+<p class="subtitle">
+Real Members • Real Results • Real Transformation
+</p>
+
+<div class="slider">
+
+<button class="prev">&#10094;</button>
+
+<div class="slides">
+
+<img src="transformation/t1.jpeg" class="slide active">
+
+<img src="transformation/t2.jpeg" class="slide">
+
+<img src="transformation/t3.jpeg" class="slide">
+
+<img src="transformation/t4.jpeg" class="slide">
+
+<img src="transformation/t5.jpeg" class="slide">
+
+<img src="transformation/t6.jpeg" class="slide">
+
+<img src="transformation/t7.jpeg" class="slide">
+
+</div>
+
+<button class="next">&#10095;</button>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- Contact -->
+
+<section id="contact" class="section">
+
+<div class="container">
+
+<h2 class="title">
+
+Contact Us
+
+</h2>
+
+<p>
+
+📞 +91 8543804210
+
+</p>
+
+<a class="btn"
+
+href="https://chat.whatsapp.com/HRDZN5Bllx74QV34udndcz"
+
+target="_blank">
+
+Join Now
+
+</a>
+
+</div>
+
+</section>
+
+<!-- ============================================================
+     SMART HEALTH DASHBOARD
+     ============================================================ -->
+
+<section class="section" id="tools">
+<div class="container">
+
+<h2 class="title"><i class="fa-solid fa-chart-pulse"></i> Smart Health Dashboard</h2>
+<p class="subtitle">Know Your Health in Seconds — Calculate Everything Instantly</p>
+
+<div class="dash-input-panel">
+  <h3><i class="fa-solid fa-user-pen"></i> Your Details</h3>
+  <div class="dash-input-grid">
+    <div class="dash-field">
+      <label><i class="fa-solid fa-venus-mars"></i> Gender</label>
+      <select id="dashGender">
+        <option value="male">Male</option>
+        <option value="female">Female</option>
+      </select>
+    </div>
+    <div class="dash-field">
+      <label><i class="fa-solid fa-cake-candles"></i> Age</label>
+      <input type="number" id="dashAge" placeholder="18-100" min="10" max="120">
+    </div>
+    <div class="dash-field">
+      <label><i class="fa-solid fa-ruler-vertical"></i> Height (cm)</label>
+      <input type="number" id="dashHeight" placeholder="e.g. 170" min="50" max="280">
+    </div>
+    <div class="dash-field">
+      <label><i class="fa-solid fa-weight-scale"></i> Weight (kg)</label>
+      <input type="number" id="dashWeight" placeholder="e.g. 75" min="10" max="400">
+    </div>
+    <div class="dash-field">
+      <label><i class="fa-solid fa-person-walking"></i> Activity Level</label>
+      <select id="dashActivity">
+        <option value="1.2">Sedentary (Desk Job)</option>
+        <option value="1.375" selected>Light (1-2 days/week)</option>
+        <option value="1.55">Moderate (3-5 days/week)</option>
+        <option value="1.725">Active (6-7 days/week)</option>
+        <option value="1.9">Very Active (Athlete)</option>
+      </select>
+    </div>
+    <div class="dash-field">
+      <label><i class="fa-solid fa-bullseye"></i> Fitness Goal</label>
+      <select id="dashGoal">
+        <option value="lose">Weight Loss</option>
+        <option value="gain">Weight Gain</option>
+        <option value="maintain">Maintain Weight</option>
+        <option value="lifestyle">Healthy Lifestyle</option>
+      </select>
+    </div>
+  </div>
+  <div class="dash-btn-group">
+    <button class="btn dash-calc-btn" onclick="calculateHealth()"><i class="fa-solid fa-calculator"></i> Calculate</button>
+    <button class="btn2 dash-reset-btn" onclick="resetDashboard()"><i class="fa-solid fa-rotate"></i> Reset</button>
+  </div>
+</div>
+
+<div class="dash-err" id="dashErr"></div>
+
+<div class="dash-results" id="dashResults">
+
+  <!-- Tool 1 : BMI -->
+  <div class="dash-card" data-tool="bmi">
+    <div class="dash-card-head"><i class="fa-solid fa-weight"></i> BMI Calculator</div>
+    <div class="dash-card-body">
+      <div class="dash-stat" id="bmiValue">—</div>
+      <div class="dash-label">Your BMI</div>
+      <div class="dash-badge" id="bmiCategory">—</div>
+      <div class="dash-progress"><div class="dash-progress-bar" id="bmiBar" style="width:0%"></div></div>
+      <div class="dash-progress-labels"><span style="color:#2196F3">Under</span><span style="color:#4CAF50">Normal</span><span style="color:#FF9800">Over</span><span style="color:#f44336">Obese</span></div>
+    </div>
+  </div>
+
+  <!-- Tool 2 : Ideal Weight -->
+  <div class="dash-card" data-tool="ideal">
+    <div class="dash-card-head"><i class="fa-solid fa-scale-balanced"></i> Ideal Weight Range</div>
+    <div class="dash-card-body">
+      <div class="dash-flex-3">
+        <div><span class="dash-stat-sm" id="idealMin">—</span><div class="dash-label">Min (kg)</div></div>
+        <div><span class="dash-stat-sm" id="idealMax">—</span><div class="dash-label">Max (kg)</div></div>
+        <div><span class="dash-stat-sm" id="idealDiff">—</span><div class="dash-label">Difference</div></div>
+      </div>
+      <div class="dash-note" id="idealNote"></div>
+    </div>
+  </div>
+
+  <!-- Tool 3 : Weight Goal -->
+  <div class="dash-card" data-tool="goal">
+    <div class="dash-card-head"><i class="fa-solid fa-bullseye"></i> Weight Goal</div>
+    <div class="dash-card-body">
+      <div class="dash-stat" id="goalAmount">—</div>
+      <div class="dash-label" id="goalLabel">Need to</div>
+      <div class="dash-stat-sm" id="goalTarget">—</div>
+      <div class="dash-label">Estimated Healthy Target</div>
+    </div>
+  </div>
+
+  <!-- Tool 4 : Water -->
+  <div class="dash-card" data-tool="water">
+    <div class="dash-card-head"><i class="fa-solid fa-droplet"></i> Water Intake</div>
+    <div class="dash-card-body">
+      <div class="dash-flex-2">
+        <div><span class="dash-stat" id="waterL">—</span><div class="dash-label">Litres</div></div>
+        <div><span class="dash-stat" id="waterG">—</span><div class="dash-label">Glasses</div></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Tool 5 : BMR -->
+  <div class="dash-card" data-tool="bmr">
+    <div class="dash-card-head"><i class="fa-solid fa-fire"></i> BMR (Basal Metabolic Rate)</div>
+    <div class="dash-card-body">
+      <div class="dash-stat" id="bmrValue">—</div>
+      <div class="dash-label">Calories / Day (Resting)</div>
+    </div>
+  </div>
+
+  <!-- Tool 6 : Daily Calories -->
+  <div class="dash-card" data-tool="calories">
+    <div class="dash-card-head"><i class="fa-solid fa-bolt"></i> Daily Calories</div>
+    <div class="dash-card-body">
+      <div class="dash-flex-3">
+        <div><span class="dash-stat-sm" id="calMaintain">—</span><div class="dash-label">Maintenance</div></div>
+        <div><span class="dash-stat-sm" id="calLoss">—</span><div class="dash-label">Weight Loss</div></div>
+        <div><span class="dash-stat-sm" id="calGain">—</span><div class="dash-label">Weight Gain</div></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Tool 7 : Protein -->
+  <div class="dash-card" data-tool="protein">
+    <div class="dash-card-head"><i class="fa-solid fa-drumstick-bite"></i> Protein Intake</div>
+    <div class="dash-card-body">
+      <div class="dash-flex-3">
+        <div><span class="dash-stat-sm" id="proteinMin">—</span><div class="dash-label">Minimum (g)</div></div>
+        <div><span class="dash-stat-sm" id="proteinRec">—</span><div class="dash-label">Recommended (g)</div></div>
+        <div><span class="dash-stat-sm" id="proteinAth">—</span><div class="dash-label">Athlete (g)</div></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Tool 8 : Steps -->
+  <div class="dash-card" data-tool="steps">
+    <div class="dash-card-head"><i class="fa-solid fa-shoe-prints"></i> Daily Steps Goal</div>
+    <div class="dash-card-body">
+      <div class="dash-flex-2">
+        <div><span class="dash-stat" id="stepsValue">—</span><div class="dash-label">Recommended Steps</div></div>
+        <div><span class="dash-stat" id="stepsWalk">—</span><div class="dash-label">Walking Minutes</div></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Tool 9 : Exercise -->
+  <div class="dash-card" data-tool="exercise">
+    <div class="dash-card-head"><i class="fa-solid fa-dumbbell"></i> Exercise Recommendation</div>
+    <div class="dash-card-body">
+      <div id="exerciseList" class="dash-ex-list"></div>
+    </div>
+  </div>
+
+  <!-- Tool 10 : Sleep -->
+  <div class="dash-card" data-tool="sleep">
+    <div class="dash-card-head"><i class="fa-solid fa-moon"></i> Sleep Recommendation</div>
+    <div class="dash-card-body">
+      <div class="dash-flex-2">
+        <div><span class="dash-stat" id="sleepHours">—</span><div class="dash-label">Hours</div></div>
+        <div><span class="dash-stat" id="sleepTime">—</span><div class="dash-label">Ideal Bedtime</div></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Tool 11 : Goal Time -->
+  <div class="dash-card" data-tool="goaltime">
+    <div class="dash-card-head"><i class="fa-solid fa-clock"></i> Estimated Goal Time</div>
+    <div class="dash-card-body">
+      <div class="dash-flex-2">
+        <div><span class="dash-stat" id="goalWeeks">—</span><div class="dash-label">Weeks</div></div>
+        <div><span class="dash-stat" id="goalMonths">—</span><div class="dash-label">Months</div></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Tool 12 : Health Score -->
+  <div class="dash-card dash-card-wide" data-tool="score">
+    <div class="dash-card-head"><i class="fa-solid fa-star"></i> Health Score</div>
+    <div class="dash-card-body dash-score-body">
+      <div class="dash-score-circle" id="scoreCircle">
+        <span id="scoreValue">0</span>
+        <span class="dash-score-label">/100</span>
+      </div>
+      <div class="dash-score-detail" id="scoreDetail"></div>
+    </div>
+  </div>
+
+  <!-- Tool 13 : Health Risk -->
+  <div class="dash-card" data-tool="risk">
+    <div class="dash-card-head"><i class="fa-solid fa-triangle-exclamation"></i> Health Risk</div>
+    <div class="dash-card-body">
+      <div class="dash-stat" id="riskLevel" style="font-size:28px;">—</div>
+      <div class="dash-risk-bar" id="riskBar"><div id="riskFill"></div></div>
+    </div>
+  </div>
+
+  <!-- Tool 14 : Nutrition -->
+  <div class="dash-card dash-card-wide" data-tool="nutrition">
+    <div class="dash-card-head"><i class="fa-solid fa-plate-wheat"></i> Nutrition Recommendation</div>
+    <div class="dash-card-body">
+      <div class="dash-flex-4">
+        <div><span class="dash-stat-sm" id="nutriCal">—</span><div class="dash-label">Calories</div></div>
+        <div><span class="dash-stat-sm" id="nutriProtein">—</span><div class="dash-label">Protein (g)</div></div>
+        <div><span class="dash-stat-sm" id="nutriCarbs">—</span><div class="dash-label">Carbs (g)</div></div>
+        <div><span class="dash-stat-sm" id="nutriFat">—</span><div class="dash-label">Fat (g)</div></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Tool 15 : Tips -->
+  <div class="dash-card dash-card-wide" data-tool="tips">
+    <div class="dash-card-head"><i class="fa-solid fa-lightbulb"></i> Personal Health Tips</div>
+    <div class="dash-card-body">
+      <ul class="dash-tips" id="tipsList"></ul>
+    </div>
+  </div>
+
+</div>
+
+<div class="dash-actions">
+  <button class="btn" onclick="downloadReport()"><i class="fa-solid fa-download"></i> Download Report</button>
+  <button class="btn2" onclick="printReport()"><i class="fa-solid fa-print"></i> Print</button>
+  <button class="btn2" onclick="shareResult()"><i class="fa-solid fa-share-nodes"></i> Share</button>
+  <button class="btn2" onclick="copyResult()"><i class="fa-solid fa-copy"></i> Copy</button>
+  <button class="btn" onclick="shareWhatsApp()" style="background:#25D366;"><i class="fa-brands fa-whatsapp"></i> WhatsApp</button>
+  <a href="#register" class="btn" style="background:#FF6F00;text-align:center;"><i class="fa-solid fa-user-plus"></i> Join FREE Session</a>
+</div>
+
+</div>
+</section>
+
+<!-- Registration Form -->
+
+<section class="section" id="register">
+
+<div class="container">
+
+<h2 class="title">Free Session Registration</h2>
+
+<p class="subtitle">अपनी जानकारी दें और FREE 3-Day Session में join करें</p>
+
+<form class="reg-form" onsubmit="registerWA(event)">
+
+<input type="text" id="regName" placeholder="आपका नाम *" required>
+
+<input type="tel" id="regPhone" placeholder="मोबाइल नंबर *" required>
+
+<input type="number" id="regAge" placeholder="आपकी उम्र" min="1" max="120">
+
+<textarea id="regIssues" rows="4" placeholder="अपनी health issues लिखें (जैसे: weight gain, BP, sugar, knee pain, stress, PCOS etc.)"></textarea>
+
+<button type="submit" class="btn reg-btn">📩 Register Now</button>
+
+</form>
+
+<p style="text-align:center;font-size:12px;color:#999;margin-top:10px;">🔒 आपकी जानकारी सुरक्षित है। केवल health coaching के लिए उपयोग होगी।</p>
+
+<div id="regMsg" style="text-align:center;margin-top:20px;font-weight:600;color:#34a853;display:none;"></div>
+
+</div>
+
+</section>
+
+<!-- Social -->
 
 <section class="section">
 
 <div class="container">
 
-<h2>Why Join Us?</h2>
+<h2 class="title">
 
-<p>Small Changes. Big Transformation.</p>
+Connect With Us
 
-<div class="benefits">
+</h2>
 
-<div class="card">
+<div class="social-grid">
 
-<h4>🥗 Nutrition Guidance</h4>
+<a href="https://www.facebook.com/share/18ysNTEaHW/" target="_blank"><i class="fab fa-facebook"></i> Facebook</a>
 
-<p>Easy Indian diet plans without expensive supplements.</p>
+<a href="https://www.instagram.com/fattofitcommunity?igsh=MTduODUyajkybWJyNg==" target="_blank"><i class="fab fa-instagram"></i> Instagram</a>
 
-</div>
+<a href="https://chat.whatsapp.com/HRDZN5Bllx74QV34udndcz" target="_blank"><i class="fab fa-whatsapp"></i> WhatsApp Group</a>
 
-<div class="card">
+<a href="https://whatsapp.com/channel/0029Vb8P5rUDDmFQFvsU4O3M" target="_blank"><i class="fab fa-whatsapp"></i> WhatsApp Channel</a>
 
-<h4>🏃 Weight Management</h4>
-
-<p>Healthy fat loss and weight gain support.</p>
-
-</div>
-
-<div class="card">
-
-<h4>❤️ BP & Sugar Support</h4>
-
-<p>Healthy lifestyle guidance for better wellness.</p>
-
-</div>
-
-<div class="card">
-
-<h4>💪 Community Support</h4>
-
-<p>Thousands of members motivating each other every day.</p>
-
-</div>
-
-<div class="card">
-
-<h4>🧘 Daily Wellness Tips</h4>
-
-<p>Healthy habits, meditation and stress management.</p>
-
-</div>
-
-<div class="card">
-
-<h4>📱 Online Sessions</h4>
-
-<p>Attend FREE health awareness sessions from home.</p>
-
-</div>
+<a href="https://t.me/FatToFitCommunity" target="_blank"><i class="fab fa-telegram"></i> Telegram</a>
 
 </div>
 
@@ -507,35 +699,125 @@ Daily motivation, live sessions, nutrition guidance, weight management, communit
 
 </section>
 
-<section class="join">
-
-<h2>Join FREE 3-Day Health Awareness Session</h2>
-
-<p>
-
-Start your transformation today with Fat To Fit Community.
-
-</p>
-
-<a class="btn" href="https://wa.me/918543804210">Join Now</a>
-
-</section>
+<!-- Footer -->
 
 <footer>
 
-<h3>Fat To Fit Community</h3>
+<p>
 
-<p>Healthy Habits • Better Lifestyle • Wellness Support</p>
+© 2026 Fat To Fit Community
 
-<br>
-
-<p>📞 8543804210</p>
-
-<p>© 2026 Fat To Fit Community</p>
+</p>
 
 </footer>
+<!-- ChatBot -->
 
-<a class="whatsapp" href="https://wa.me/918543804210">💬</a>
+<div id="chatbot-container"><!-- =========================
+     ChatBot
+========================= -->
+
+<div id="chatbot">
+
+    <div id="chat-header">
+
+        <div>
+
+            <strong>🤖 Fat To Fit Assistant</strong><br>
+
+            <small>Online</small>
+
+        </div>
+
+        <button id="closeChat">✕ Close</button>
+
+    </div>
+
+    <div id="chat-body">
+
+        <div class="bot">
+
+            👋 Hello!
+
+            <br><br>
+
+            Welcome to <b>Fat To Fit Community</b>
+
+            <br><br>
+
+            How can I help you today?
+
+        </div>
+
+    </div>
+
+    <div class="quick-buttons">
+
+        <button onclick="quickReply('join')">Join</button>
+
+        <button onclick="quickReply('diet')">Diet</button>
+
+        <button onclick="quickReply('bmi')">BMI</button>
+
+        <button onclick="quickReply('exercise')">Exercise</button>
+
+    </div>
+
+    <div id="chat-footer">
+
+        <input
+
+        type="text"
+
+        id="userInput"
+
+        placeholder="Type your message...">
+
+        <button id="sendBtn">
+
+            ➤
+
+        </button>
+
+    </div>
+
+</div>
+
+<button id="chatIcon">
+
+💬
+
+</button></div>
+
+
+
+<a class="floating"
+
+href="https://chat.whatsapp.com/HRDZN5Bllx74QV34udndcz"
+
+target="_blank">
+
+<i class="fab fa-whatsapp"></i>
+
+</a>
+
+<button id="topBtn">
+
+<i class="fa-solid fa-arrow-up"></i>
+
+</button>
+
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+
+<script src="Chatbot/knowledge.js"></script>
+
+<script src="Chatbot/chatbot.js"></script>
+
+<script src="script.js"></script>
+
+
+
+
 
 </body>
+
 </html>
